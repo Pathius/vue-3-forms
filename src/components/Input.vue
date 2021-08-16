@@ -19,7 +19,6 @@
 </template>
 
 <script>
-// TODO Create example of a modifier
 export default {
   props: {
     id: {
