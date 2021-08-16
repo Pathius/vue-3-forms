@@ -2,7 +2,7 @@
   <Input
     v-model="form.name"
     placeholder="Please insert your name"
-    label="name"
+    label="Name"
     type="text"
   />
   {{ form.name }}
