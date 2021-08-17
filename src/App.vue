@@ -1,27 +1,16 @@
 <template>
   <Input
-    v-model="form.name"
+    v-model="name"
     placeholder="Please insert your name"
     label="Name"
     type="text"
   />
-  {{ form.name }}
+  {{ name }}
 </template>
 
-<script>
-import { ref } from 'vue'
-import Input from './components/Input.vue'
+<script setup>
+import { ref } from 'vue';
+import Input from './components/Input.vue';
 
-export default {
-  components: {
-    Input
-  },
-  setup () {
-    const form = ref({
-      name: ''
-    })
-
-    return { form }
-  }
-}
+const name = ref('');
 </script>
