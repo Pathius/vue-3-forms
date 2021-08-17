@@ -24,6 +24,10 @@
 <script>
 export default {
   props: {
+    id: {
+      type: String,
+      default: ''
+    },
     label: {
       type: String,
       default: '',
