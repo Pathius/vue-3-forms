@@ -5,7 +5,8 @@
   >
     {{ label }}
   </label>
-  <select 
+  <select
+    :id="id || label"
     :value="modelValue"
     v-bind="$attrs"
     @change="$emit('update:modelValue', $event.target.value)"
@@ -24,6 +25,10 @@
 <script>
 export default {
   props: {
+    id: {
+      type: String,
+      default: ''
+    },
     label: {
       type: String,
       default: '',
