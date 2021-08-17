@@ -1,13 +1,13 @@
 <template>
   <input
-    :for="id || label"
+    :id="id || label"
     type="checkbox"
     :checked="modelValue"
     @change="$emit('update:modelValue', $event.target.checked)"
   >
   <label
     v-if="label"
-    :id="id || label"
+    :for="id || label"
   >
     {{ label }}
   </label>
