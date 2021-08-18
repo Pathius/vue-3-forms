@@ -1,11 +1,13 @@
 <template>
   <input
     :id="id || label"
-    type="checkbox"
-    :checked="modelValue"
-    @change="$emit('update:modelValue', $event.target.checked)"
+    type="radio"
+    :checked="modelValue === value"
+    :value="value"
+    v-bind="$attrs"
+    @change="$emit('update:modelValue', value)"
   >
-  <label
+  <label 
     v-if="label"
     :for="id || label"
   >
@@ -22,12 +24,16 @@ export default {
     },
     label: {
       type: String,
-      default: '',
+      default: ''
     },
     modelValue: {
-      type: Boolean,
-      default: false
+      type: [String, Number],
+      default: ''
     },
-  },
-};
+    value: {
+      type: [String, Number],
+      required: true
+    }
+  }
+}
 </script>
