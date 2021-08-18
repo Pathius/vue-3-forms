@@ -4,6 +4,7 @@
     type="radio"
     :checked="modelValue === value"
     :value="value"
+    v-bind="$attrs"
     @change="$emit('update:modelValue', value)"
   >
   <label 
