@@ -17,30 +17,28 @@
   <h2>
     Do you like dogs?
   </h2>
-  <Radio 
+  <RadioGroup
     v-model="likeDogs"
-    :value="1"
-    label="Yes"
-    name="likedogs"
-  />
-  <Radio 
-    v-model="likeDogs"
-    :value="0"
-    label="No"
-    name="likedogs"
+    :options="dogOptions"
+    name="likeDogs"
   />
 </template>
 
+// TODO: Provide name attribute for single each component
 <script setup>
 import { ref } from 'vue'
 import Input from './components/Input.vue'
 import Select from './components/Select.vue'
 import Checkbox from './components/Checkbox.vue'
-import Radio from './components/Radio.vue'
+import RadioGroup from './components/RadioGroup.vue'
 
 const name = ref('');
 const countries = ['Poland', 'Germany', 'USA']
 const selectedCountry = ref('')
 const isAdult = ref(false)
+const dogOptions = [
+  { label: 'Yes', value: 1 },
+  { label: 'No', value: 0 }
+]
 const likeDogs = ref(1)
 </script>
