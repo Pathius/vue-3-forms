@@ -1,5 +1,4 @@
 <template>
-
 </template>
 
 // TODO: Implement reset.css file, provide font, title, favicon etc.
@@ -20,3 +19,7 @@
 // TODO: Make sure you're following rules of accessibility
 <script setup>
 </script>
+
+<style lang="scss">
+@import 'scss/_reset.scss';
+</style>
