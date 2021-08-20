@@ -21,5 +21,5 @@
 </script>
 
 <style lang="scss">
-@import 'scss/_reset.scss';
+@import 'scss/main.scss';
 </style>
