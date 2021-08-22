@@ -1,6 +1,10 @@
 <template>
+  <div class="page">
+    <Header />
+  </div>
 </template>
 
+// TODO: Create typography file 
 // TODO: Create Header component basic styling
 // TODO: Create Form component with basic styling
 // TODO: Create new form component where there will be separate sections for individual data
@@ -18,8 +22,14 @@
 // TODO: Provide name attribute for single each component
 // TODO: Make sure you're following rules of accessibility
 <script setup>
+import Header from './components/header/Header.vue'
 </script>
 
 <style lang="scss">
 .page {
+  min-height: 100vh;
+  background-color: $light-gray;
+  display: flex;
+  justify-content: center;
+}
 </style>
