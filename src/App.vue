@@ -4,8 +4,6 @@
   </div>
 </template>
 
-// TODO: Create typography file 
-// TODO: Create Header component basic styling
 // TODO: Create Form component with basic styling
 // TODO: Create new form component where there will be separate sections for individual data
 // TODO: Section 1 will cover basic informations like name, email, age, country
