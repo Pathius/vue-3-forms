@@ -1,8 +1,8 @@
 <template>
 </template>
 
-// TODO: Implement reset.css file, provide font, title, favicon etc.
-// TODO: Cleanup existing project structure
+// TODO: Create Header component basic styling
+// TODO: Create Form component with basic styling
 // TODO: Create new form component where there will be separate sections for individual data
 // TODO: Section 1 will cover basic informations like name, email, age, country
 // TODO: Improve styling for Input and Select
