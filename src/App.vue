@@ -21,5 +21,5 @@
 </script>
 
 <style lang="scss">
-@import 'scss/main.scss';
+.page {
 </style>
