@@ -1,6 +1,7 @@
 <template>
   <div class="page">
     <Header />
+    <Form />
   </div>
 </template>
 
@@ -21,6 +22,7 @@
 // TODO: Make sure you're following rules of accessibility
 <script setup>
 import Header from './components/header/Header.vue'
+import Form from './components/form/Form.vue'
 </script>
 
 <style lang="scss">
@@ -28,6 +30,6 @@ import Header from './components/header/Header.vue'
   min-height: 100vh;
   background-color: $light-gray;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
 }
 </style>
