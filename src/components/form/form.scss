@@ -1,0 +1,21 @@
+.form {
+  width: 100%;
+  max-width: 560px;
+  background-color: $white;
+  border-radius: 12px;
+  margin: 32px auto;
+  padding: 24px 32px;
+  border: 1px solid $gray;
+  box-shadow: $gray 0px 10px 36px 0px;
+
+  &__fieldset {
+    border-bottom: 1px solid $gray;
+    padding-bottom: 24px;
+  }
+
+  &__legend {
+    color: $black;
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+}
