@@ -1,25 +1,23 @@
 <template>
   <input
-    :id="id || label"
+    :id="id"
     type="checkbox"
     :checked="modelValue"
     @change="$emit('update:modelValue', $event.target.checked)"
   >
   <label
     v-if="label"
-    :for="id || label"
+    :for="id"
   >
     {{ label }}
   </label>
 </template>
 
 <script>
+import uniqueID from '../features/uniqueID';
+
 export default {
   props: {
-    id: {
-      type: String,
-      default: ''
-    },
     label: {
       type: String,
       default: '',
@@ -29,5 +27,9 @@ export default {
       default: false
     },
   },
+  setup () {
+    const id = uniqueID().getID()
+    return { id }
+  }
 };
 </script>

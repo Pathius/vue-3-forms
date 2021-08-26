@@ -1,12 +1,12 @@
 <template>
   <label
     v-if="label"
-    :for="id || label"
+    :for="id"
   >
     {{ label }}
   </label>
   <select
-    :id="id || label"
+    :id="id"
     :value="modelValue"
     v-bind="$attrs"
     @change="$emit('update:modelValue', $event.target.value)"
@@ -23,12 +23,10 @@
 </template>
 
 <script>
+import uniqueID from '../features/uniqueID.js'
+
 export default {
   props: {
-    id: {
-      type: String,
-      default: ''
-    },
     label: {
       type: String,
       default: '',
@@ -42,5 +40,9 @@ export default {
       required: true
     }
   },
+  setup () {
+    const id = uniqueID().getID()
+    return { id }
+  }
 };
 </script>

@@ -1,6 +1,6 @@
 <template>
   <input
-    :id="id || label"
+    :id="id"
     type="radio"
     :checked="modelValue === value"
     :value="value"
@@ -9,19 +9,17 @@
   >
   <label 
     v-if="label"
-    :for="id || label"
+    :for="id"
   >
     {{ label }}
   </label>
 </template>
 
 <script>
+import uniqueID from '../features/uniqueID.js'
+
 export default {
   props: {
-    id: {
-      type: String,
-      default: ''
-    },
     label: {
       type: String,
       default: ''
@@ -34,6 +32,10 @@ export default {
       type: [String, Number],
       required: true
     }
+  },
+  setup () {
+    const id = uniqueID().getID()
+    return { id }
   }
 }
 </script>

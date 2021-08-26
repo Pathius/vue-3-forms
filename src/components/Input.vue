@@ -3,7 +3,7 @@
   <!-- After clicking on label input will focus -->
   <label 
     v-if="label"
-    :for="id || label"
+    :for="id"
   >
     {{ label }}
   </label>
@@ -11,7 +11,7 @@
   <!-- If placeholder is not declined, label will be used as placeholder -->
   <input
     v-bind="$attrs"
-    :id="id || label"
+    :id="id"
     :placeholder="placeholder || label"
     :value="modelValue"
     @input="$emit('update:modelValue', $event.target.value)"
@@ -19,12 +19,10 @@
 </template>
 
 <script>
+import uniqueID from '../features/uniqueID.js'
+
 export default {
   props: {
-    id: {
-      type: String,
-      default: ''
-    },
     label: {
       type: String,
       default: ''
@@ -37,6 +35,10 @@ export default {
       type: [String, Number],
       default: ''
     }
+  },
+  setup () {
+    const id = uniqueID().getID()
+    return { id }
   }
 }
 </script>
