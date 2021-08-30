@@ -3,22 +3,26 @@
     <fieldset class="form__fieldset">
       <legend class="form__legend">Basic information</legend>
       <Input
+        wrapperClass="form__input"
         v-model="form.fullName"
         label="Full name"
         placeholder="Wayne Fisher"
       />
       <Input
+        wrapperClass="form__input"
         type="email"
         v-model="form.email"
         label="Email"
         placeholder="wayne@gmail.com"
       />
-      <Input 
+      <Input
+        wrapperClass="form__input"
         type="date"
         v-model="form.birthdate"
-        label="Birthdate" 
+        label="Birthdate"
       />
       <Select
+        wrapperClass="form__input"
         v-model="form.favouriteAnimal"
         :options="animals"
         label="Favourite animal"
@@ -29,8 +33,8 @@
 
 <script setup>
 import { ref } from 'vue';
-import Input from '../Input.vue';
-import Select from '../Select.vue';
+import Input from '../input/Input.vue';
+import Select from '../select/Select.vue';
 
 const form = ref({
   fullName: '',
